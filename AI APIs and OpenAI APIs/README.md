@@ -20,7 +20,7 @@ This Lecture covers the fundamentals of using AI APIs, focusing primarily on Ope
 * Without API keys, anyone could overload the API endpoint, causing service disruptions.
 
 
-### How to Generate API Keys
+### 2.1. How to Generate API Keys
 
 * Platforms like OpenAI provide a dashboard to create API keys.
 * For OpenAI:
@@ -30,7 +30,7 @@ This Lecture covers the fundamentals of using AI APIs, focusing primarily on Ope
   * Copy the key for use in your code.
 
 
-### Securing API Keys
+### 2.2 Securing API Keys
 
 * Never hard-code API keys directly in your source code.
 * Instead, store them in a .env file, which holds sensitive credentials.
@@ -39,7 +39,7 @@ This Lecture covers the fundamentals of using AI APIs, focusing primarily on Ope
 
 ## 3. Setting Up Your Development Environment
 
-### Creating and Using a .env File
+### 3.1 Creating and Using a .env File
 
 * Create a .env file in your project root.
 
@@ -47,3 +47,27 @@ Store your API key as a key-value pair, e.g.:<br>
 OPENAI_API_KEY=your_api_key_here
 * Use environment variable loaders (e.g., python-dotenv package) to access these keys in your code.
 
+
+### 3.2 Installing Required Packages
+Install OpenAI's Python package to access API functionalities:
+
+**pip install openai**
+
+#### Install python-dotenv to load .env files:
+**pip install python-dotenv**
+
+
+### 3.3. Importance of API Rate Limits and Usage Restrictions
+
+* API providers set limits to prevent abuse and ensure fair usage:
+  * Example: Maximum 100,000 requests per minute.
+  * Credits and quotas restrict how much you can use.
+* Unauthorized or excessive requests may result in errors or service blocks.
+* API keys help enforce these rules by identifying users.
+
+
+### 3.4 Common Errors and Exception Handling
+* Unauthorized: Invalid or missing API key.
+* Rate Limit Exceeded: Too many requests in a short time.
+* Insufficient Quota: Usage limit exceeded.
+* Properly handle exceptions in your code to inform users or retry gracefully.
