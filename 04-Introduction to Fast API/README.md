@@ -44,6 +44,9 @@ To use FastAPI, we need to install it along with Uvicorn, which is an ASGI serve
 
 ```bash
 pip install fastapi uvicorn
+or 
+uv pip install fastapi uvicorn
+
 ```
 
 #### Step 2: Create a FastAPI Application
