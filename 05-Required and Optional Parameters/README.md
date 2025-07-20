@@ -10,3 +10,6 @@ In this Lecture, we will explore the creation and execution of a FastAPI applica
 #### 2. GET vs POST Methods
 * GET Method: Retrieves data from the server. This was used initially for basic display, like showing a "Hello World" message.
 * POST Method: Sends data to the server for processing. In this case, the POST method processes the input string and returns the processed result along with its length.
+
+#### 3. Validation with Pydantic
+FastAPI leverages Pydantic for validating input and ensuring data integrity. We define the input parameters, their types, and whether they are required or optional.
